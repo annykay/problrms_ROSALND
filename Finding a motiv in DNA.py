@@ -43,3 +43,7 @@ def FindSubString(Text, Pattern):
     else:
         return positions
 
+if __name__ == "__main__":
+    string = input('Enter the string ')
+    pattern = input('Enter the substring ')
+    print(' '.join(map(str, FindSubString(string, pattern))))
