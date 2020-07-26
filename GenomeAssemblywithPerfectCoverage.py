@@ -93,3 +93,13 @@ class DeBruijnGraph():
             cycle = self.find_cycle(graph) 
         return cycles
 
+if __name__ == '__main__':
+    DNA = [i for i in input().split()]
+    Graph = DeBruijnGraph(len(DNA[0]), len(DNA))
+    for i in DNA:
+        Graph.add_edge(i)
+    result = Graph.euler_cycle()
+    genom = result[0]
+    for i in result[1:-len(DNA[0])+2]:
+        genom+=i[-1]
+    print(genom)
