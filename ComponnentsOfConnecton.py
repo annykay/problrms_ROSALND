@@ -40,5 +40,15 @@ class Not_weighted_Graph():
                 dfs(i)
                 n_comp+=1
         return n_comp
+    
+    if __name__ == "__main__":
+    print('Enter the amount of Vertexes and edges in the graph')
+    n, m = [int(i) for i in input().split()]
+    Graph = Not_weighted_Graph(n)
+    for i in range(m):
+        print('Enter the new Edge')
+        u, v = [int(i) for i in input().split()]
+        Graph.add_edge(u,v)
+    print(Graph.components_of_connection())
         
 
